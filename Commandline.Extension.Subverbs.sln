@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9616ED57-745
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FCFB1645-C2E1-4D98-A0C1-0AB3DDBCB514}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commandline.Extension.Subverbs.Tests", "tests\Commandline.Extension.Subverbs.Tests\Commandline.Extension.Subverbs.Tests.csproj", "{22D1F9EB-0E32-47CD-8357-D5B96DDE43F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commandline.Extension.Subverbs.Tests", "tests\Commandline.Extension.Subverbs.Tests\Commandline.Extension.Subverbs.Tests.csproj", "{22D1F9EB-0E32-47CD-8357-D5B96DDE43F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
