@@ -7,13 +7,18 @@
 
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>CommandLineParser.Extension.Subverbs</PackageId>
+    <PackageId Condition="'$(BuildTarget)' != 'fsharp'">CommandLineParser.Extension.Subverbs</PackageId>
+    <PackageId Condition="'$(BuildTarget)' == 'fsharp'">CommandLineParser.Extension.Subverbs.FSharp</PackageId>
     <Description>Extension methods to help with parsing subverbs using the CommandLineParser library.</Description>
     <PackageTags>commandlineparser;extension;subverbs</PackageTags>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(BuildTarget)' != 'fsharp'">
     <PackageReference Include="CommandLineParser" Version="2.5.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(BuildTarget)' == 'fsharp'">
+    <PackageReference Include="CommandLineParser.FSharp" Version="2.5.0" />
   </ItemGroup>
 
 </Project>
