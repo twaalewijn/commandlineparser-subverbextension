@@ -5,7 +5,7 @@ namespace Commandline.Extension.Subverbs.Tests.Verbs
 {
     public class EchoVerb
     {
-        [Value(0, HelpText = "Value to echo.")]
+        [Value(0, Required = true, HelpText = "Value to echo.")]
         public string Input { get; set; }
     }
 
