@@ -16,7 +16,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T>(parser,
@@ -38,7 +38,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2>(parser,
@@ -61,7 +61,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3>(parser,
@@ -85,7 +85,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4>(parser,
@@ -110,7 +110,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4, T5>(parser,
@@ -136,7 +136,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4, T5, T6>(parser,
@@ -163,7 +163,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4, T5, T6, T7>(parser,
@@ -191,7 +191,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8>(parser,
@@ -220,7 +220,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9>(parser,
@@ -250,7 +250,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(parser,
@@ -281,7 +281,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(parser,
@@ -313,7 +313,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(parser,
@@ -346,7 +346,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(parser,
@@ -380,7 +380,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(parser,
@@ -415,7 +415,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(parser,
@@ -451,7 +451,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             params Type[] verbTypes)
         {
             return ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(parser,
@@ -473,7 +473,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -498,7 +498,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -524,7 +524,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -551,7 +551,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -579,7 +579,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -608,7 +608,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -638,7 +638,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -669,7 +669,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -701,7 +701,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -734,7 +734,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -769,7 +769,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -805,7 +805,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -842,7 +842,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -880,7 +880,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -919,7 +919,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
@@ -959,7 +959,7 @@ namespace CommandLine
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(this Parser parser,
             IEnumerable<string> args,
-            Func<Parser, ParserResult<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
+            Func<Parser, Parsed<object>, IEnumerable<string>, bool, ParserResult<object>> onVerbsetParsed,
             bool helpOrVersionRequested,
             params Type[] verbTypes)
         {
