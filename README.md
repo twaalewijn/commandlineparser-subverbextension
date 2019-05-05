@@ -46,7 +46,8 @@ class Program
     static int Main(string[] args)
     {
         // Parse using ParseSetArguments instead of ParseArguments.
-        ParserResult<object> parsed = Parser.Default.ParseSetArguments<CalculatorVerbSet>(args, onVerbSetParsed);
+        ParserResult<object> parsed = Parser.Default
+            .ParseSetArguments<CalculatorVerbSet>(args, onVerbSetParsed);
 
         // Handle the actual verbs like normal.
         return parsed.MapResult(
@@ -63,7 +64,10 @@ class Program
             (_) => 1);
     }
 
-    private static ParserResult<object> onVerbSetParsed(Parser parser, Parsed<object> parsed, IEnumerable<string> argsToParse, bool containedHelpOrVersion)
+    private static ParserResult<object> onVerbSetParsed(Parser parser,
+        Parsed<object> parsed,
+        IEnumerable<string> argsToParse,
+        bool containedHelpOrVersion)
     {
         return parsed.MapResult(
             // Incase the calc verb was parsed, parse again for add or subtract.
@@ -77,23 +81,36 @@ Parsing verbs on the same level as verb sets is also supported:
 
 ```csharp
 // Here the add verb is available on the root level just like calc.
-ParserResult<object> parsed = Parser.Default.ParseSetArguments<CalculatorVerbSet>(args, onVerbSetParsed, typeof(AddVerb));
+ParserResult<object> parsed = Parser.Default
+    .ParseSetArguments<CalculatorVerbSet>(args, onVerbSetParsed, typeof(AddVerb));
 ```
 
 Further nesting of verb sets works as well, but to make sure auto help/version behaves properly call the ```ParseSetArguments``` overload with the value of ```containedHelpOrVersion``` from the callback:
 
 ```csharp
-ParserResult<object> parsed = Parser.Default.ParseSetArguments<CalculatorVerbSet>(args, onCalcVerbSetParsed);
+ParserResult<object> parsed = Parser.Default
+    .ParseSetArguments<CalculatorVerbSet>(args, onCalcVerbSetParsed);
 
-private static ParserResult<object> onCalcVerbSetParsed(Parser parser, Parsed<object> parsed, IEnumerable<string> argsToParse, bool containedHelpOrVersion)
+private static ParserResult<object> onCalcVerbSetParsed(Parser parser,
+    Parsed<object> parsed,
+    IEnumerable<string> argsToParse,
+    bool containedHelpOrVersion)
 {
     return parsed.MapResult(
         // Parse again for add or subtract verbs or the sci sub verb set and pass containedHelpOrVersion.
-        (CalculatorVerbSet _) => parser.ParseSetArguments<SciCalculatorVerbSet>(argsToParse, onSciCalcVerbSetParsed, containedHelpOrVersion, typeof(AddVerb), typeof(SubtractVerb)),
+        (CalculatorVerbSet _) =>
+            parser.ParseSetArguments<SciCalculatorVerbSet>(argsToParse,
+                onSciCalcVerbSetParsed,
+                containedHelpOrVersion,
+                typeof(AddVerb),
+                typeof(SubtractVerb)),
         (_) => parsed);
 }
 
-private static ParserResult<object> onSciCalcVerbSetParsed(Parser parser, Parsed<object> parsed, IEnumerable<string> argsToParse, bool containedHelpOrVersion)
+private static ParserResult<object> onSciCalcVerbSetParsed(Parser parser,
+    Parsed<object> parsed,
+    IEnumerable<string> argsToParse,
+    bool containedHelpOrVersion)
 {
     return parsed.MapResult(
         // Parse again for verbs belonging to the sci sub verb set.
