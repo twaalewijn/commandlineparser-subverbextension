@@ -5,7 +5,7 @@ using Commandline.Extension.Subverbs;
 
 namespace CommandLine
 {
-    public static class ParserExtensions
+    public static partial class ParserExtensions
     {
         /// <summary>
         /// Parses the passed arguments for both verbsets and regular verbs.
