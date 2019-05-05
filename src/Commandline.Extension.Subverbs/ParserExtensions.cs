@@ -5,6 +5,9 @@ using Commandline.Extension.Subverbs;
 
 namespace CommandLine
 {
+    /// <summary>
+    /// Contains extension methods for <see cref="Parser"/> to make working with subverbs easier.
+    /// </summary>
     public static partial class ParserExtensions
     {
         /// <summary>

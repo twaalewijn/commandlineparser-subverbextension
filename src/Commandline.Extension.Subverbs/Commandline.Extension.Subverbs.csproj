@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net40;net45;net461</TargetFrameworks>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Commandline.Extension.Subverbs.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

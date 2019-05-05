@@ -159,7 +159,7 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
+        /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7>(this Parser parser,
             IEnumerable<string> args,
@@ -186,8 +186,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8>(this Parser parser,
             IEnumerable<string> args,
@@ -214,9 +214,9 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9>(this Parser parser,
             IEnumerable<string> args,
@@ -243,9 +243,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
@@ -274,9 +273,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <typeparam name="T11">The eleventh type to parse as a verbset.</typeparam>
@@ -306,9 +304,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <typeparam name="T11">The eleventh type to parse as a verbset.</typeparam>
@@ -339,9 +336,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <typeparam name="T11">The eleventh type to parse as a verbset.</typeparam>
@@ -373,9 +369,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <typeparam name="T11">The eleventh type to parse as a verbset.</typeparam>
@@ -408,9 +403,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <typeparam name="T11">The eleventh type to parse as a verbset.</typeparam>
@@ -444,9 +438,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <typeparam name="T11">The eleventh type to parse as a verbset.</typeparam>
@@ -612,7 +605,6 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6>(this Parser parser,
             IEnumerable<string> args,
@@ -642,7 +634,6 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7>(this Parser parser,
@@ -673,9 +664,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8>(this Parser parser,
             IEnumerable<string> args,
@@ -705,9 +695,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
         public static ParserResult<object> ParseSetArguments<T1, T2, T3, T4, T5, T6, T7, T8, T9>(this Parser parser,
@@ -738,9 +727,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <returns>A <see cref="ParserResult{T}"/> with either the verb type that was parsed or one or more <see cref="Error"/>s.</returns>
@@ -773,9 +761,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <typeparam name="T11">The eleventh type to parse as a verbset.</typeparam>
@@ -809,9 +796,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <typeparam name="T11">The eleventh type to parse as a verbset.</typeparam>
@@ -846,9 +832,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <typeparam name="T11">The eleventh type to parse as a verbset.</typeparam>
@@ -884,9 +869,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <typeparam name="T11">The eleventh type to parse as a verbset.</typeparam>
@@ -923,9 +907,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <typeparam name="T11">The eleventh type to parse as a verbset.</typeparam>
@@ -963,9 +946,8 @@ namespace CommandLine
         /// <typeparam name="T4">The fourth type to parse as a verbset.</typeparam>
         /// <typeparam name="T5">The fifth type to parse as a verbset.</typeparam>
         /// <typeparam name="T6">The sixth type to parse as a verbset.</typeparam>
-        /// <typeparam name="T6">The seventh type to parse as a verbset.</typeparam>
         /// <typeparam name="T7">The seventh type to parse as a verbset.</typeparam>
-        /// <typeparam name="T8">The eigth type to parse as a verbset.</typeparam>
+        /// <typeparam name="T8">The eighth type to parse as a verbset.</typeparam>
         /// <typeparam name="T9">The ninth type to parse as a verbset.</typeparam>
         /// <typeparam name="T10">The tenth type to parse as a verbset.</typeparam>
         /// <typeparam name="T11">The eleventh type to parse as a verbset.</typeparam>
