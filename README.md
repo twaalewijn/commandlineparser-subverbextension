@@ -114,7 +114,7 @@ private static ParserResult<object> onSciCalcVerbSetParsed(Parser parser,
 {
     return parsed.MapResult(
         // Parse again for verbs belonging to the sci sub verb set.
-        (SciCalculatorVerbSet _) => parser.ParseSetArguments<SinVerb, CosVerb, TanVerb>(argsToParse),
+        (SciCalculatorVerbSet _) => parser.ParseArguments<SinVerb, CosVerb, TanVerb>(argsToParse),
         (_) => parsed);
 }
 ```
