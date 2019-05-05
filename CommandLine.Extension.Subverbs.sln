@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commandline.Extension.Subverbs", "src\Commandline.Extension.Subverbs\Commandline.Extension.Subverbs.csproj", "{5C1207D3-CDE2-455E-997D-DE125E9A74DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLine.Extension.Subverbs", "src\CommandLine.Extension.Subverbs\CommandLine.Extension.Subverbs.csproj", "{5C1207D3-CDE2-455E-997D-DE125E9A74DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9616ED57-745D-478F-8164-ACBF30A0045C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FCFB1645-C2E1-4D98-A0C1-0AB3DDBCB514}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commandline.Extension.Subverbs.Tests", "tests\Commandline.Extension.Subverbs.Tests\Commandline.Extension.Subverbs.Tests.csproj", "{22D1F9EB-0E32-47CD-8357-D5B96DDE43F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLine.Extension.Subverbs.Tests", "tests\CommandLine.Extension.Subverbs.Tests\CommandLine.Extension.Subverbs.Tests.csproj", "{22D1F9EB-0E32-47CD-8357-D5B96DDE43F5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B2B9DF6D-5101-4581-A368-1097C72D5C57}"
 	ProjectSection(SolutionItems) = preProject

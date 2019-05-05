@@ -21,7 +21,7 @@ public static string AssemblyInfoVersion = "0.0.0.0";
 
 public static string PublishPathRoot = "./publish";
 
-public static string SolutionFile = "./Commandline.Extension.Subverbs.sln";
+public static string SolutionFile = "./CommandLine.Extension.Subverbs.sln";
 
 //////////////////////////////////////////////////////////////////////
 // TASKS
