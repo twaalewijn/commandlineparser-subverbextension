@@ -5,6 +5,13 @@
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Commandline.Extension.Subverbs.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>CommandLineParser.Extension.Subverbs</PackageId>
+    <Description>Extension methods to help with parsing subverbs using the CommandLineParser library.</Description>
+    <PackageTags>commandlineparser;extension;subverbs</PackageTags>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.5.0" />
   </ItemGroup>

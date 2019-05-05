@@ -1,0 +1,12 @@
+<Project>
+    <PropertyGroup>
+        <Authors>Tim Waalewijn</Authors>
+        <Copyright>Copyright © 2019 Tim Waalewijn</Copyright>
+        <Version>0.0.0.0</Version>
+        <InformationalVersion>0.0.0.0</InformationalVersion>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/twaalewijn/commandlineparser-subverbextension</RepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+</Project>
