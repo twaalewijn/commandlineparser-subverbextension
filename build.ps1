@@ -38,7 +38,7 @@ https://cakebuild.net
 [CmdletBinding()]
 Param(
     [string]$Script = "build.cake",
-    [ValidateSet("Build", "Publish", "Test", "Publish-NuGet")]
+    [ValidateSet("Build", "Publish", "Test", "Publish-NuGet", "FSharp-Build", "FSharp-Test", "FSharp-Publish")]
     [string]$Target,
     [string]$Configuration,
     [ValidateSet("Quiet", "Minimal", "Normal", "Verbose", "Diagnostic")]

@@ -23,6 +23,8 @@ public static string PublishPathRoot = "./publish";
 
 public static string SolutionFile = "./CommandLine.Extension.Subverbs.sln";
 
+public static bool RunFSharpBuild = false;
+
 //////////////////////////////////////////////////////////////////////
 // TASKS
 //////////////////////////////////////////////////////////////////////
@@ -98,6 +100,12 @@ Task("PrepareAssemblyInfo")
         System.IO.File.WriteAllText(buildPropsFile.FullPath, newPropsFile.ToString(), Encoding.UTF8);
     });
 
+Task("PrepareFsharpBuild")
+    .Does(() =>
+    {
+        RunFSharpBuild = true;
+    });
+
 Task("Purge")
     .Does(() =>
     {
@@ -107,10 +115,18 @@ Task("Purge")
 Task("Build")
     .Does(() =>
     {
-        DotNetCoreBuild(SolutionFile, new DotNetCoreBuildSettings
+        DotNetCoreBuildSettings settings = new DotNetCoreBuildSettings
         {
             Configuration = configuration
-        });
+        };
+
+        if (RunFSharpBuild)
+        {
+            settings.MSBuildSettings = new DotNetCoreMSBuildSettings()
+                .WithProperty("BuildTarget", "fsharp");
+        }
+
+        DotNetCoreBuild(SolutionFile, settings);
     });
 
 Task("Test")
@@ -156,6 +172,18 @@ Task("Publish")
     .IsDependentOn("Purge")
     .IsDependentOn("PrepareAssemblyInfo")
     .IsDependentOn("Publish-NuGet");
+
+Task("FSharp-Build")
+    .IsDependentOn("PrepareFSharpBuild")
+    .IsDependentOn("Build");
+
+Task("FSharp-Test")
+    .IsDependentOn("PrepareFSharpBuild")
+    .IsDependentOn("Test");
+
+Task("FSharp-Publish")
+    .IsDependentOn("PrepareFSharpBuild")
+    .IsDependentOn("Publish");
 
 //////////////////////////////////////////////////////////////////////
 // EXECUTION
