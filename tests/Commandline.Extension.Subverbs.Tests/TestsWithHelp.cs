@@ -271,6 +271,49 @@ namespace Commandline.Extension.Subverbs.Tests
             TestHelpWrittenForEchoVerb<EchoVerb1>(helpBuilder, requested);
         }
 
+        [Theory]
+        [InlineData("help")]
+        [InlineData("--help")]
+        [InlineData("help", "verbset1")]
+        [InlineData("verbset1", "--help")]
+        [InlineData("verbset1", "help", "verbset2")]
+        [InlineData("verbset1", "verbset2", "--help")]
+        [InlineData("verbset1", "verbset2", "help", "add")]
+        [InlineData("verbset1", "verbset2", "add", "--help")]
+        [InlineData("verbset1", "verbset2", "help", "echo")]
+        [InlineData("verbset1", "verbset2", "echo", "--help")]
+        public void Errors_Are_Written_If_Auto_Help_Is_False(params string[] args)
+        {
+            StringBuilder helpBuilder = new StringBuilder();
+            StringWriter helpWriter = new StringWriter(helpBuilder);
+
+            Parser parser = new Parser(settings =>
+            {
+                settings.AutoHelp = false;
+                settings.HelpWriter = helpWriter;
+            });
+
+            ParserResult<object> onVerbSetParsed(Parser p, ParserResult<object> parsed, IEnumerable<string> argsToParse, bool hasHelpOrVersion)
+            {
+                return parsed.MapResult(
+                    (VerbSet1 _) => p.ParseSetArguments(argsToParse, new Type[] { typeof(VerbSet2), typeof(VerbSet3) }, null, onNestedParsed, hasHelpOrVersion),
+                    (_) => throw new Exception("This mapped path should not have been called."));
+            }
+
+            ParserResult<object> onNestedParsed(Parser p, ParserResult<object> parsed, IEnumerable<string> argsToParse, bool hasHelpOrVersion)
+            {
+                return parsed.MapResult(
+                    (VerbSet2 _) => p.ParseArguments(argsToParse, typeof(AddVerb1), typeof(EchoVerb1)),
+                    (VerbSet3 _) => throw new Exception("This mapped path should not have been called."),
+                    (_) => throw new Exception("This mapped path should not have been called."));
+            }
+
+            ParserResult<object> result = parser.ParseSetArguments(args, new Type[] { typeof(VerbSet1) }, null, onVerbSetParsed);
+
+            string[] helpLines = helpBuilder.ToString().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            helpLines[2].Should().Be("ERROR(S):", "version gives errors if AutoVersion is false.");
+        }
+
         private void TestHelpWrittenForVerbs(StringBuilder helpBuilder, bool requested, params Type[] verbsInHelp)
         {
             string[] helpLines = helpBuilder.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
