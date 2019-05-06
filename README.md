@@ -1,10 +1,14 @@
 # Subverbs extension for [CommandLineParser](https://github.com/commandlineparser/commandline)
 
-[![Build status](https://waalewijn.visualstudio.com/commandlineparser-subverbextension/_apis/build/status/commandlineparser-subverbextension-CI)](https://waalewijn.visualstudio.com/commandlineparser-subverbextension/_build/latest?definitionId=1)
-
 This project contains a library with extension methods to help with parsing subverbs using the .NET [CommandLineParser](https://github.com/commandlineparser/commandline) library.
 
-# Usage
+## Build Status
+
+Branch | Status
+---|---
+master | [![Build status](https://waalewijn.visualstudio.com/commandlineparser-subverbextension/_apis/build/status/commandlineparser-subverbextension-CI?branchName=master)](https://waalewijn.visualstudio.com/commandlineparser-subverbextension/_build/latest?definitionId=1)
+
+## Usage
 Define an empty verb class that should act as a verb set:
 
 ```csharp
