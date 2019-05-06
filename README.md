@@ -9,7 +9,7 @@ Branch | Status
 master | [![Build status](https://waalewijn.visualstudio.com/commandlineparser-subverbextension/_apis/build/status/commandlineparser-subverbextension-CI?branchName=master)](https://waalewijn.visualstudio.com/commandlineparser-subverbextension/_build/latest?definitionId=1)
 
 ## Usage
-Define an empty verb class that should act as a verb set:
+Define an empty verb class that should act as a subverb set:
 
 ```csharp
 [Verb("calc", HelpText = "Calculator commands.")]
@@ -101,7 +101,7 @@ private static ParserResult<object> onCalcVerbSetParsed(Parser parser,
     bool containedHelpOrVersion)
 {
     return parsed.MapResult(
-        // Parse again for add or subtract verbs or the sci sub verb set and pass containedHelpOrVersion.
+        // Parse again for add or subtract verbs or the sci subverb set and pass containedHelpOrVersion.
         (CalculatorVerbSet _) =>
             parser.ParseSetArguments<SciCalculatorVerbSet>(argsToParse,
                 onSciCalcVerbSetParsed,
@@ -117,7 +117,7 @@ private static ParserResult<object> onSciCalcVerbSetParsed(Parser parser,
     bool containedHelpOrVersion)
 {
     return parsed.MapResult(
-        // Parse again for verbs belonging to the sci sub verb set.
+        // Parse again for verbs belonging to the sci subverb set.
         (SciCalculatorVerbSet _) => parser.ParseArguments<SinVerb, CosVerb, TanVerb>(argsToParse),
         (_) => parsed);
 }
