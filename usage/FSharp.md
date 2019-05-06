@@ -1,4 +1,4 @@
-# Usage for C#
+# Usage for F#
 Define an empty verb type that should act as a subverb set:
 
 ```fsharp
@@ -30,9 +30,9 @@ Then, instead of calling ```ParseArguments``` on your Parser, call ```ParseSetAr
 ```fsharp
 // Define a function that will be called when 'calc' is parsed as the current verb.
 let onVerbSetParsed (parser:Parser) (parsed:Parsed<obj>) (args:IEnumerable<string>) (containedHelpOrVersion:bool) =
-        match parsed.Value with
-        | :? CalculatorVerbSet -> parser.ParseArguments<AddVerb, SubtractVerb> args
-        | _ -> parsed :> ParserResult<obj>
+    match parsed.Value with
+    | :? CalculatorVerbSet -> parser.ParseArguments<AddVerb, SubtractVerb> args
+    | _ -> parsed :> ParserResult<obj>
 
 // Either:
 // - Define functions to convert the F# func to the System.Func type that ParseSetArguments expects.
