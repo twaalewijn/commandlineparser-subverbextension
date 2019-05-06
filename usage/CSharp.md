@@ -21,7 +21,7 @@ public class AddVerb
     public int Second { get; set; }
 }
 
-[Verb("subtract", HelpText = "Subtract two numbers commands.")]
+[Verb("subtract", HelpText = "Subtract two numbers.")]
 public class SubtractVerb
 {
     [Value(0, Required = true, HelpText = "The number to subract from.")]
