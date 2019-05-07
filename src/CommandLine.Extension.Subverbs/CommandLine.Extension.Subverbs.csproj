@@ -2,23 +2,18 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net40;net45;net461</TargetFrameworks>
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Commandline.Extension.Subverbs.xml</DocumentationFile>
+    <DocumentationFile>$(OutputDirectory)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId Condition="'$(BuildTarget)' != 'fsharp'">CommandLineParser.Extension.Subverbs</PackageId>
-    <PackageId Condition="'$(BuildTarget)' == 'fsharp'">CommandLineParser.Extension.Subverbs.FSharp</PackageId>
+    <PackageId>CommandLineParser.Extension.Subverbs</PackageId>
     <Description>Extension methods to help with parsing subverbs using the CommandLineParser library.</Description>
     <PackageTags>commandlineparser;extension;subverbs</PackageTags>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(BuildTarget)' != 'fsharp'">
+  <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.5.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(BuildTarget)' == 'fsharp'">
-    <PackageReference Include="CommandLineParser.FSharp" Version="2.5.0" />
   </ItemGroup>
 
 </Project>

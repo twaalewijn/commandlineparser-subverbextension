@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net40;net45;net461</TargetFrameworks>
+    <DocumentationFile>$(OutputDirectory)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>CommandLineParser.Extension.Subverbs.FSharp</PackageId>
+    <Description>Extension methods to help with parsing subverbs using the CommandLineParser.FSharp library.</Description>
+    <PackageTags>commandlineparser;extension;subverbs</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../CommandLine.Extension.Subverbs/**/*.cs" />
+    <Compile Remove="../CommandLine.Extension.Subverbs/obj/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser.FSharp" Version="2.5.0" />
+  </ItemGroup>
+
+</Project>
