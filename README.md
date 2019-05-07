@@ -10,7 +10,7 @@ master | [![Build status](https://waalewijn.visualstudio.com/commandlineparser-s
 
 ## How To Use
 
-See the usage guide for the language you are using.
+See the links below for an example in one of the supported languages.
 
 * [C#](usage/CSharp.md)
 * [F#](usage/FSharp.md)
@@ -36,7 +36,7 @@ NuGet packages will be located in the bin folders.
 Run one of the targets below by calling ```build.ps1``` from a ```powershell``` prompt:
 
 ```
->build.ps1 -Target <Target here>
+>.\build.ps1 -Target <Target here>
 ```
 
 Target | Does
