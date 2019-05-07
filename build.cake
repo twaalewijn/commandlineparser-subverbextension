@@ -45,26 +45,44 @@ Task("PrepareAssemblyInfo")
         StringBuilder infoVersion = new StringBuilder();
         infoVersion.Append(AssemblyVersion + "-" + versionParts[2]);
 
-        try
-        {
-            GitBranch versionBranch = GitBranchCurrent(".");
+        string tempSuffix = "";
 
-            if (versionBranch.FriendlyName != "(no branch)")
+        if (TFBuild.IsRunningOnTFS)
+        {
+            if (EnvironmentVariable("BUILD_SOURCEBRANCH").StartsWith("refs/tags"))
             {
-                infoVersion.Append($"-{versionBranch.FriendlyName}");
-            }
-            else if (versionParts[1] == "0")
-            {
-                infoVersion.Append($"-tag");
+                tempSuffix = "tag";
             }
             else
             {
-                infoVersion.Append($"-headless");
+                tempSuffix = EnvironmentVariable("BUILD_SOURCEBRANCHNAME");
             }
         }
-        catch
+        else
         {
+            try
+            {
+                GitBranch versionBranch = GitBranchCurrent(".");
+
+                if (versionBranch.FriendlyName != "(no branch)")
+                {
+                    tempSuffix = versionBranch.FriendlyName;
+                }
+                else if (versionParts[1] == "0")
+                {
+                    tempSuffix = "tag";
+                }
+                else
+                {
+                    tempSuffix = "headless";
+                }
+            }
+            catch
+            {
+            }
         }
+
+        infoVersion.Append($"-{tempSuffix}");
 
         Information("Resetting Directory.Build.props.");
         GitCheckout(".", buildPropsFile);
