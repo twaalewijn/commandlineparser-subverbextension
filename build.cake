@@ -47,7 +47,7 @@ Task("PrepareAssemblyInfo")
 
         string tempSuffix = "";
 
-        if (TFBuild.IsRunningOnTFS)
+        if (TFBuild.IsRunningOnVSTS)
         {
             if (EnvironmentVariable("BUILD_SOURCEBRANCH").StartsWith("refs/tags"))
             {
