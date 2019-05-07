@@ -84,10 +84,9 @@ Task("PrepareAssemblyInfo")
 
         infoVersion.Append($"-{tempSuffix}");
 
-        Information("Resetting Directory.Build.props.");
-        GitCheckout(".", buildPropsFile);
-        
         AssemblyInfoVersion = infoVersion.ToString();
+
+        Information("Modifying Directory.Build.props.");
 
         string[] oldPropsFile = System.IO.File.ReadAllLines(buildPropsFile.FullPath, Encoding.UTF8);
 
