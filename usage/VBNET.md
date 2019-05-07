@@ -1,4 +1,4 @@
-# Usage for C#
+# Usage for VB.NET
 Define an empty verb class that should act as a subverb set:
 
 ```vb
