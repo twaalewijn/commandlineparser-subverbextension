@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLine.Extension.Subverbs.FSharp", "src\CommandLine.Extension.Subverbs.FSharp\CommandLine.Extension.Subverbs.FSharp.csproj", "{404EC50A-A3E7-4FA4-9B86-E229FED6AE8D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLine.Extension.Subverbs.FSharp.Tests", "tests\CommandLine.Extension.Subverbs.FSharp.Tests\CommandLine.Extension.Subverbs.FSharp.Tests.csproj", "{24B91BD4-8DBE-4E47-B63D-990513785B90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{404EC50A-A3E7-4FA4-9B86-E229FED6AE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{404EC50A-A3E7-4FA4-9B86-E229FED6AE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{404EC50A-A3E7-4FA4-9B86-E229FED6AE8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B91BD4-8DBE-4E47-B63D-990513785B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B91BD4-8DBE-4E47-B63D-990513785B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B91BD4-8DBE-4E47-B63D-990513785B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B91BD4-8DBE-4E47-B63D-990513785B90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{5C1207D3-CDE2-455E-997D-DE125E9A74DE} = {9616ED57-745D-478F-8164-ACBF30A0045C}
 		{22D1F9EB-0E32-47CD-8357-D5B96DDE43F5} = {FCFB1645-C2E1-4D98-A0C1-0AB3DDBCB514}
 		{404EC50A-A3E7-4FA4-9B86-E229FED6AE8D} = {9616ED57-745D-478F-8164-ACBF30A0045C}
+		{24B91BD4-8DBE-4E47-B63D-990513785B90} = {FCFB1645-C2E1-4D98-A0C1-0AB3DDBCB514}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {53FD03DA-DF28-4FCF-923E-A1C4E943A296}
