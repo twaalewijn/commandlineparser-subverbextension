@@ -1,4 +1,4 @@
-<Project>
+﻿<Project>
     <PropertyGroup>
         <Authors>Tim Waalewijn</Authors>
         <Copyright>Copyright © 2019 Tim Waalewijn</Copyright>
@@ -8,5 +8,9 @@
         <RepositoryUrl>https://github.com/twaalewijn/commandlineparser-subverbextension</RepositoryUrl>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$(GenerateDocFile) == true">
+        <DocumentationFile>$(OutputDirectory)\$(AssemblyName).xml</DocumentationFile>
     </PropertyGroup>
 </Project>

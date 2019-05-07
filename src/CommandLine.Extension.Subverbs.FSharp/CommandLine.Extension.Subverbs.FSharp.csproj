@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net40;net45;net461</TargetFrameworks>
-    <DocumentationFile>$(OutputDirectory)\$(AssemblyName).xml</DocumentationFile>
+    <GenerateDocFile>true</GenerateDocFile>
   </PropertyGroup>
 
   <PropertyGroup>
