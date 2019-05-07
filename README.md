@@ -11,3 +11,4 @@ master | [![Build status](https://waalewijn.visualstudio.com/commandlineparser-s
 ## How To Use
 * [C#](usage/CSharp.md)
 * [F#](usage/FSharp.md)
+* [VB.NET](usage/VBNET.md)
