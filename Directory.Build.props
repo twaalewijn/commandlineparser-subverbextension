@@ -9,8 +9,4 @@
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
-
-    <PropertyGroup Condition="$(GenerateDocFile) == true">
-        <DocumentationFile>$(OutputDirectory)\$(AssemblyName).xml</DocumentationFile>
-    </PropertyGroup>
 </Project>
