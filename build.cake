@@ -42,6 +42,9 @@ Task("PrepareAssemblyInfo")
         }
 
         AssemblyVersion = versionParts[0] + "." + versionParts[1];
+
+        bool injectPackageVersionProp = versionParts[1] != "0";
+
         StringBuilder infoVersion = new StringBuilder();
         infoVersion.Append(AssemblyVersion + "-" + versionParts[2]);
 
@@ -105,6 +108,12 @@ Task("PrepareAssemblyInfo")
             {
                 Information($"Setting <InformationalVersion> to {AssemblyInfoVersion}.");
                 newPropsFile.AppendLine(versionRegex.Replace(oldLine, $">{AssemblyInfoVersion}<"));
+            }
+            else if (injectPackageVersionProp && oldLine.Contains("<PackageVersion>"))
+            {
+                string packageVersion = AssemblyInfoVersion + "-beta" + versionParts[1];
+                Information($"Setting <PackageVersion> to {packageVersion} for pre-release package.");
+                newPropsFile.AppendLine(versionRegex.Replace(oldLine, $">{packageVersion}<"));
             }
             else
             {
