@@ -111,7 +111,7 @@ Task("PrepareAssemblyInfo")
             }
             else if (injectPackageVersionProp && oldLine.Contains("<PackageVersion>"))
             {
-                string packageVersion = AssemblyInfoVersion + "-beta" + versionParts[1];
+                string packageVersion = versionParts[0] + "." + versionParts[1] + "-beta";
                 Information($"Setting <PackageVersion> to {packageVersion} for pre-release package.");
                 newPropsFile.AppendLine(versionRegex.Replace(oldLine, $">{packageVersion}<"));
             }
