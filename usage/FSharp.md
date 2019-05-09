@@ -1,4 +1,7 @@
 # Usage for F#
+
+Install the [CommandLineParser.Extension.Subverbs.FSharp](https://www.nuget.org/packages/CommandLineParser.Extension.Subverbs.FSharp/) package into your project.
+
 Define an empty verb type that should act as a subverb set:
 
 ```fsharp
