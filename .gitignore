@@ -332,3 +332,6 @@ ASALocalRun/
 # Cake
 tools/**
 !tools/packages.config
+
+# Coverlet
+coverlet
