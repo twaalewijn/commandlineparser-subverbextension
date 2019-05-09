@@ -1,4 +1,7 @@
 # Usage for VB.NET
+
+Install the [CommandLineParser.Extension.Subverbs](https://www.nuget.org/packages/CommandLineParser.Extension.Subverbs/) package into your project.
+
 Define an empty verb class that should act as a subverb set:
 
 ```vb
