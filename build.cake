@@ -155,7 +155,7 @@ Task("Test")
         CoverletSettings coverletSettings = new CoverletSettings
         {
             CollectCoverage = true,
-            CoverletOutputFormat = CoverletOutputFormat.opencover,
+            CoverletOutputFormat = CoverletOutputFormat.cobertura
         };
 
         DotNetCoreTest(SolutionFile, testSettings, coverletSettings);
