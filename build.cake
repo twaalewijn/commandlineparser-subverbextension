@@ -1,6 +1,7 @@
 #tool "nuget:?package=Microsoft.TestPlatform&version=16.0.1"
 
 #addin "nuget:?package=Cake.Git&version=0.19.0"
+#addin "nuget:?package=Cake.Coverlet&version=2.2.1"
 
 using System.Text.RegularExpressions;
 
@@ -143,13 +144,21 @@ Task("Test")
     .IsDependentOn("Build")
     .Does(() =>
     {
-        DotNetCoreTest(SolutionFile, new DotNetCoreTestSettings
+        DotNetCoreTestSettings testSettings = new DotNetCoreTestSettings
         {
             Configuration = configuration,
             NoBuild = true,
             Logger = "trx",
             ResultsDirectory = "./TestResults"
-        });
+        };
+
+        CoverletSettings coverletSettings = new CoverletSettings
+        {
+            CollectCoverage = true,
+            CoverletOutputFormat = CoverletOutputFormat.opencover,
+        };
+
+        DotNetCoreTest(SolutionFile, testSettings, coverletSettings);
     });
 
 Task("Publish-NuGet")

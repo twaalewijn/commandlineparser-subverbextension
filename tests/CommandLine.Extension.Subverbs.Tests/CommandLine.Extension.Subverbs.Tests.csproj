@@ -13,6 +13,10 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
 
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+    <PackageReference Include="coverlet.msbuild" Version="2.6.1" />
+  </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\..\src\Commandline.Extension.Subverbs\Commandline.Extension.Subverbs.csproj" />
   </ItemGroup>
