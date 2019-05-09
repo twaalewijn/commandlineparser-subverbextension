@@ -1,4 +1,7 @@
 # Subverbs extension for [CommandLineParser](https://github.com/commandlineparser/commandline)
+[![Sonar Quality Gate](https://img.shields.io/sonar/https/sonarcloud.io/twaalewijn_commandlineparser-subverbextension/quality_gate.svg)](https://sonarcloud.io/dashboard?id=twaalewijn_commandlineparser-subverbextension)
+[![Sonar Documented API Density](https://img.shields.io/sonar/https/sonarcloud.io/twaalewijn_commandlineparser-subverbextension/public_documented_api_density.svg)](https://sonarcloud.io/dashboard?id=twaalewijn_commandlineparser-subverbextension)
+[![Sonar Coverage](https://img.shields.io/sonar/https/sonarcloud.io/twaalewijn_commandlineparser-subverbextension/coverage.svg)](https://sonarcloud.io/dashboard?id=twaalewijn_commandlineparser-subverbextension)
 
 This project contains a library with extension methods to help with parsing subverbs using the .NET [CommandLineParser](https://github.com/commandlineparser/commandline) library.
 
