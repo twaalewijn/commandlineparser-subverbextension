@@ -3,6 +3,7 @@
 This project contains a library with extension methods to help with parsing subverbs using the .NET [CommandLineParser](https://github.com/commandlineparser/commandline) library.
 
 Subverb structures are currently not officially supported in CommandLineParser and the feature is being tracked in [this issue here](https://github.com/commandlineparser/commandline/issues/399).
+
 Until an official solution has been implemented you can use this library to nest and group verbs as deeply as you desire without breaking, for example, the auto help.
 
 ## Build Status
