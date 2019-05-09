@@ -44,3 +44,20 @@ Target | Does
 Build | Builds the solution.
 Test | Builds and tests the solution.
 Publish | Versions the assemblies based on the current tag by modifying Directory.Build.props, builds/tests the solution and copies the artifacts to ```./publish```.<br/><br/> **WARNING:** Cleans the repository via ```git clean -xdf```. Make sure unadded files are committed first.
+
+## Contributing
+
+Contributions are welcome, thanks for wanting to help out!
+
+To make your contribution as smooth as possible for both of us please follow the guidelines below.
+
+* File an issue stating what currently isn't working for you (perferably with a pseudo code example of the verbs, parser settings and commandline calls that were used).
+* If you decide to fix it yourself:
+    * Thanks :)
+    * Create a branch based on develop instead of master.
+    * Add some tests to test your fix or feature (at least one that tests the code example from your issue).
+    * Submit a pull request while targeting the develop branch.
+    * I'll try to review it as soon as I have time (usually during the weekend).
+
+> Note that, because this project is only an extension, issues might also be caused by [CommandLineParser](https://github.com/commandlineparser/commandline/issues) itself.
+> Please confirm that your issue is not already a known issue there before filing an issue on this project.
