@@ -10,7 +10,8 @@ Until an official solution has been implemented you can use this library to nest
 
 Branch | Status
 ---|---
-master | [![Build status](https://waalewijn.visualstudio.com/commandlineparser-subverbextension/_apis/build/status/commandlineparser-subverbextension-CI?branchName=master)](https://waalewijn.visualstudio.com/commandlineparser-subverbextension/_build/latest?definitionId=1)
+master | [![Build status](https://waalewijn.visualstudio.com/commandlineparser-subverbextension/_apis/build/status/commandlineparser-subverbextension-CI?branchName=master)](https://waalewijn.visualstudio.com/commandlineparser-subverbextension/_build/latest?definitionId=1&branchName=master)
+develop | [![Build status](https://waalewijn.visualstudio.com/commandlineparser-subverbextension/_apis/build/status/commandlineparser-subverbextension-CI?branchName=develop)](https://waalewijn.visualstudio.com/commandlineparser-subverbextension/_build/latest?definitionId=1&branchName=develop)
 
 ## How To Use
 
